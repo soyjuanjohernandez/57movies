@@ -1,9 +1,14 @@
-$base-color: #808080;
+@import 'variables';
+
+
+
+$base-color: var(--color-primary);
 
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:16px;
 }
 
 h1{
     color: $base-color;
-}
+}   
