@@ -1,0 +1,19 @@
+.input__container{
+    background-color: var(--color-white);
+    box-sizing: border-box;
+    color: var(--color-secondary);
+    font-size: .88rem;
+    font-weight: 500;
+    border:  none;
+    padding: 0 20px;
+    height: 53px;
+    width: 100%;
+    cursor: pointer;
+    transition: var( --transition-all);
+    outline: transparent;
+    border-radius: 27px;
+    &:hover{
+        opacity: .9;
+        color: var(--color-primary);
+    }
+}
