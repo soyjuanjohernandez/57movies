@@ -1,5 +1,4 @@
 .login{
-    background-image: url('../assets/background_mobile.jpg');
     background-size: cover;
     height:100%;
     width:100%;
@@ -10,7 +9,7 @@
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.281);
         backdrop-filter: blur(10px);
-        height: 80%;
+        height: 90%;
         width: 90%;
         display: flex;
         justify-content: center;
@@ -23,10 +22,17 @@
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
+            h1{
+                font:var(--font-medium);
+                text-align: left;
+                width: 90%;
+                margin-bottom: 10px;
+                text-shadow: var(--box-shadow);
+            }
             img{
                 width: 183px;
                 height: 221px;
-                margin-bottom: 80px;
+                margin-bottom: 60px;
             }
             .btn__container{
                 margin-top: 30px;

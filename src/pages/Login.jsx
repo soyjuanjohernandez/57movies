@@ -1,13 +1,16 @@
 import React from "react";
 import Button from "../components/atoms/button/Button";
 import Input from "../components/atoms/input/Input";
+import logo from "../assets/logo-login.svg";
+import backgroundImg from "../assets/background_mobile.jpg";
 
 const Login = () => {
   return (
-    <div className="login">
+    <div className="login" style={{ backgroundImage: `url(${backgroundImg})` }}>
       <div className="login__content">
         <div className="login__items">
-          <img src="../assets/logo_login.png" alt="" srcset="" />
+          <img src={logo} alt="" srcset="" />
+          <h1>Login in your account</h1>
           <Input />
           <Input />
           <Button />
