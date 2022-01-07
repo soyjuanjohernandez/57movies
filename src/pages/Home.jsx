@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import BottomNav from "../components/molecules/bottomNav/BottomNav";
 
 const Home = () => {
     return (

@@ -12,6 +12,7 @@
     transition: var( --transition-all);
     outline: transparent;
     border-radius: 27px;
+    box-shadow: var(--box-shadow);
     &:hover{
         opacity: .9;
         color: var(--color-primary);
