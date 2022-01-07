@@ -1,0 +1,47 @@
+.movie-card{
+    background-color: rebeccapurple;
+    display: inline-block;
+    height: 252px;
+    width: 168px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    &__content{
+        background-color: rgba(0, 0, 0, 0.178);
+        backdrop-filter: blur(4px);
+        position: relative;
+        top: 161px;
+        padding: 10px;
+        transition: var(--transition-all);
+        &:hover{
+            top: -81px;
+        }
+        h3{
+            font:var(--font-medium)
+        }
+        .movie-card__info{
+            display: flex;
+            .movie-card__date-score{
+                .movie-card__date{
+                    font:var(--font-small);
+                    margin-top: 5px;
+                }
+            }
+            .movie-card__fav{
+                padding-left: 20px;
+                padding-right: 7px;
+            }
+        }
+        .movie-card__overview{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            p{
+                font-size: 0.875rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 12;
+                -webkit-box-orient: vertical;
+                line-height: 1.3;
+            }
+        }
+    }
+}
