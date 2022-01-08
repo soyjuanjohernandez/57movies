@@ -1,0 +1,29 @@
+.bottom-nav{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    img{
+        opacity: .4;
+    }
+    
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 48px;
+        a{
+            width: 50%;
+            text-align: center;
+            padding: 8px 0;
+        }
+    }
+    .bottom-nav__active{
+        opacity: 1;
+        img{
+            opacity: 1;
+        }
+    }
+
+}
