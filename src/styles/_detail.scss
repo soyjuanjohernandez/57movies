@@ -1,0 +1,87 @@
+.detail{
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    overflow: hidden;
+    .detail__content{
+        width:100%;
+        height:100%;
+        background-color: rgba(255, 255, 255, 0.178);
+        backdrop-filter: blur(4px);
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        box-sizing: border-box;
+        align-items: center;
+        overflow-y: auto;
+        overflow-x: hidden;
+        .detail__image{
+            width: 349px;
+            height: 525px;
+            border-radius: 10px;
+        }
+        h1{
+            font:var(--title);
+            margin: 15px 0;
+            text-shadow: var(--box-shadow);
+
+        }
+        .detail__overview{
+            background-color: rgba(129, 129, 129, 0.432);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 10px;
+            h3{
+                font-size: var(--font-medium);
+                text-shadow: var(--box-shadow);
+            }
+            p{
+                font: var(--font-small);
+                text-shadow: var(--box-shadow);
+            }
+        }
+        .pills{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            padding: 10px 0;
+            margin-top: 10px;
+        }
+        .detail__info{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            text-shadow: var(--box-shadow);
+            .score{
+                width: 100px;
+            }
+            .detail__duration{
+                display: flex;
+                img{
+                    width: 20px;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .detail__cast{
+            width: 100%;
+            h3{
+                margin: 10px;
+                text-shadow: var(--box-shadow);
+            }
+            .detail__casting{
+                display:flex;
+                flex-wrap:wrap;
+                justify-content:space-evenly;
+                row-gap:10px;
+            }
+        }
+    }
+
+}
