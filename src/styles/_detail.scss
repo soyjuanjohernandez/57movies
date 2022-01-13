@@ -57,9 +57,17 @@
             align-items: center;
             justify-content: space-between;
             padding: 10px 0;
-            text-shadow: var(--box-shadow);
+            filter: drop-shadow(var(--box-shadow));
             .score{
                 width: 100px;
+            }
+            .detail__release{
+                display:flex;
+                align-items:center;
+                img{
+                    width: 16px;
+                    margin-right: 5px;
+                }
             }
             .detail__duration{
                 display: flex;
@@ -72,7 +80,8 @@
         .detail__cast{
             width: 100%;
             h3{
-                margin: 10px;
+                // margin: 10px;
+                margin:20px 0;
                 text-shadow: var(--box-shadow);
             }
             .detail__casting{

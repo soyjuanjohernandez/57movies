@@ -1,6 +1,7 @@
 import React from "react";
 import MovieCard from "../components/molecules/movieCard/MovieCard";
 import backgroundBlurImg from "../assets/backgroun_bur_mobile.jpg";
+import BottomNav from "../components/molecules/bottomNav/BottomNav";
 
 const Favorites = () => {
   return (
@@ -30,6 +31,7 @@ const Favorites = () => {
         <MovieCard />
         <MovieCard />
       </div>
+      <BottomNav/>
     </div>
   );
 };

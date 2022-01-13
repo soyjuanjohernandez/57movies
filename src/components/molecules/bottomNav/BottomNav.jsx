@@ -11,12 +11,12 @@ const BottomNav = () => {
       <ul>
         <NavLink exact activeClassName="bottom-nav__active" to="/">
           <li>
-            <img src={iconHome} alt="" srcset="" />
+            <img src={iconHome} alt="" />
           </li>
         </NavLink>
         <NavLink exact activeClassName="bottom-nav__active" to="/Favorites">
           <li>
-            <img src={iconHeart} alt="" srcset="" />
+            <img src={iconHeart} alt="" />
           </li>
         </NavLink>
       </ul>

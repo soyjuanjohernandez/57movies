@@ -1,10 +1,10 @@
 import React from 'react';
 import './pill.scss'
 
-const Pill = ({text}) => {
+const Pill = ({name}) => {
     return (
         <div className='pill'>
-            <p>{text || "aventura"}</p>
+            <p>{name || "aventura"}</p>
         </div>
     )
 }

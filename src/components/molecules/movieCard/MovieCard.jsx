@@ -3,34 +3,47 @@ import "./movieCard.scss";
 import spiderman from "../../../assets/spiderman.jpg";
 import heart from "../../../assets/heart.svg";
 import Score from "../../atoms/score/Score";
+import { NavLink } from "react-router-dom";
 
-const MovieCard = () => {
+const MovieCard = ({title, overview, release_date, vote_average, backdrop_path, id }) => {
+
+  'https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US'
+
+  const saveId = (data) => {
+    localStorage.setItem("id", data);
+
+  }
+
+  const BASE_URL_IMG = 'https://image.tmdb.org/t/p/w300/'
+
   return (
+    <NavLink exact activeClassName="" to="/detail">
     <div
       className="movie-card"
-      style={{ backgroundImage: `url(${spiderman})` }}
+      style={{ backgroundImage: `url(${BASE_URL_IMG}${backdrop_path})` }}
+      onClick={() => saveId(id)}
     >
       <div className="movie-card__content">
-        <h3 className="movie-card__title">Spider-Man: Far From Home</h3>
+        <h3 className="movie-card__title">{title}</h3>
         <div className="movie-card__info">
           <div className="movie-card__date-score">
-            <div className="movie-card__date">Nov 24, 2021</div>
-            <Score /> 
+            <div className="movie-card__date">{release_date}</div>
+            <Score average={vote_average} /> 
           </div>
           <div className="movie-card__fav">
-              <img src={heart} alt="" srcset="" />
+              <img src={heart} alt="" />
           </div>
           
         </div>
         <div className="movie-card__overview">
             <h3>Overview</h3>
             <p>
-                Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.
-                Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.
+              {overview}
             </p>
           </div>
       </div>
     </div>
+    </ NavLink>
   );
 };
 

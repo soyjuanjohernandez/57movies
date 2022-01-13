@@ -1,20 +1,18 @@
-import React from 'react';
-import './score.scss';
-import star from "../../../assets/star.svg"
+import React from "react";
+import "./score.scss";
+import star from "../../../assets/star.svg";
 
-const Score = () => {
+const Score = ({ average }) => {
+  let widthDummy = average * 10;
 
-    let widthDummy = 40
+  return (
+    <div className="score" title={`Average : ${widthDummy}`}>
+      <img src={star} alt="star" />
+      <div className="score__track">
+        <div className="score__value" style={{ width: `${widthDummy}%` }}></div>
+      </div>
+    </div>
+  );
+};
 
-    return (
-        <div className='score'>
-            <img src={star} alt="" srcset="" />
-            <div className='score__track'>
-                <div className='score__value' style={{width: `${widthDummy}%`}}></div>
-            </div>
-            
-        </div>
-    )
-}
-
-export default Score
+export default Score;

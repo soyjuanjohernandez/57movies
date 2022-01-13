@@ -5,10 +5,23 @@
     overflow: hidden;
     background-color: rgba(139, 139, 139, 0.493);
     backdrop-filter: blur(4px);
+    .person__img-container {
+        height: 175px;
+        overflow: hidden;
+        img{
+            width: 138px;
+            // margin-top: -12px;
+        }
+    }
     .person__text{
         padding: 5px 10px;
-        h3{
+        height: 67px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h4{
             font: var(--font-small);
+            margin: initial;
             margin-bottom: 5px;
         }
         p{
