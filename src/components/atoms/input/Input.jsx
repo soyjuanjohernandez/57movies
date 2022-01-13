@@ -9,7 +9,7 @@ const Input = (props) => {
       type={ 'text' || type}
       className={`input__container ${className}`}
       style={style}
-      title={title}
+      title={title || "input placeholder"}
       placeholder={title || "input placeholder"}
     />
 
