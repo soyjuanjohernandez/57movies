@@ -1,0 +1,24 @@
+.search-area{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    box-shadow:var(--box-shadows);
+    padding: 0 15px;
+    img.search-area__logo {
+        height: 30px;
+        width: auto;
+    }
+    img.search-area__glass {
+        width: 25px;
+        position: absolute;
+    }
+    input{
+        background-color: initial;
+        padding-left: 40px;
+        box-shadow:initial;
+        border-radius: initial;
+        position: relative;
+        z-index: 1;
+        // margin-left: -40px;
+    }
+}
