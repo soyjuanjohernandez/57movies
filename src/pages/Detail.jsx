@@ -23,7 +23,8 @@ const Detail = () => {
   useEffect(() => {}, []);
   const detail = getDetail(API_URL, CAST_URL);
   const CAST_ITEMS = 20;
-  
+  console.log('ASASD', detail.detail.release_date);
+
   return (
     <div
       className="detail"
@@ -64,17 +65,18 @@ const Detail = () => {
             <p>{detail.detail.runtime} min</p>
           </div>
         </div>
-
-        <div className="detail__cast">
-          <h3>Cast</h3>
-          <div className="detail__casting">
-            {detail.cast.slice(0, ` ${CAST_ITEMS}`).map((item) => (
-              <li key={item.id} style={{ listStyle: "none" }}>
-                <Person {...item} />
-              </li>
-            ))}
+        {detail.cast.length && (
+          <div className="detail__cast">
+            <h3>Cast</h3>
+            <div className="detail__casting">
+              {detail.cast.slice(0, ` ${CAST_ITEMS}`).map((item) => (
+                <li key={item.id} style={{ listStyle: "none" }}>
+                  <Person {...item} />
+                </li>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
       <BottomNav />
     </div>
