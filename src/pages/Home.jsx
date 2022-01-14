@@ -9,7 +9,7 @@ const Home = () => {
   const API_KEY = "b86988ff0ef23bfb4377db9ebebc7574";
   const API_URL = `${BASE_URL}/discover/movie?api_key=${API_KEY}&page=1`;
 
-  const [searchItem, setSearchItem] = useState('');
+  const [searchItem, setSearchItem] = useState("");
   const [dataMovies, setDataMovies] = useState([]);
 
   useEffect(() => {
@@ -21,7 +21,9 @@ const Home = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchItem || 'scarlet'}`
+      `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${
+        searchItem || "scarlet"
+      }`
     )
       .then((response) => response.json())
       .then((data) => setDataMovies(data.results));
@@ -30,8 +32,6 @@ const Home = () => {
   const handleChange = (e) => {
     setSearchItem(e.target.value);
   };
-
-  console.log("MOVIES", dataMovies);
 
   return (
     <div

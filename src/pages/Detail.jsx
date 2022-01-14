@@ -23,7 +23,7 @@ const Detail = () => {
   useEffect(() => {}, []);
   const detail = getDetail(API_URL, CAST_URL);
   const CAST_ITEMS = 20;
-  console.log('ASASD', detail.detail.release_date);
+
 
   return (
     <div
